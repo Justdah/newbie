@@ -1,0 +1,160 @@
+/*
+    style.css - this stylesheet is linked from index.html to apply styles to the products home page.
+    Add all of your custom styles here.
+*/
+a:link, a:visited {
+    background-color: #a8ec28b7;
+    color: rgb(240, 243, 38);
+    text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+    text-align: center;
+    text-decoration: none;
+   
+        
+  }
+#app{
+    top: 33vh;
+position: absolute;
+top: 16vh;
+    display: grid;
+    height:82vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "products" "footer";
+    width: 100vw;
+}
+#fixed{
+    position: fixed;
+}
+header{
+    position: relative;
+    height: 8vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    padding-top: 2px;
+    background-color: #226918b7;
+    border-style: solid;
+    border-left-style: none;
+    border-bottom-style: none;
+    
+}
+nav{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 8vh;
+    top: 8vh;
+    left: 0;
+    background-color: #226918b7;
+    width: 100vw;
+    border-style: solid;
+   
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    width: auto;
+    align-items: center;
+    padding-left: 0px;
+}
+main{
+    width: 100vw;
+}
+#product-cards{
+    height: 70vh;
+    width: 100vw;
+    overflow: scroll;
+    align-content: flex-start;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 50px;
+    
+}
+.product-card{
+    min-width: 180px;
+    flex-basis: 20%;
+    border-style: solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "SKU price" "name name" "image image" ". cart ";
+    width: auto;
+    margin: 10px;
+    align-content: flex-start;
+    aspect-ratio: 1/1;
+}
+.product-image img{
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+.sku{
+    grid-area: SKU;
+}
+.price{
+    grid-area: price;
+    justify-self: flex-end;
+}
+.product-name{
+    grid-area: name;
+}
+.product-name:hover{
+    cursor: pointer;
+}
+.product-image{
+    grid-area: image;
+    justify-content: center;
+}
+.right{
+    justify-self: right;
+    margin-left: auto;
+    margin-right: 30px;
+}
+.cart{
+    grid-area: cart;
+    display: block;
+    text-align: right;
+    margin-right: 5%;
+}
+.cart:hover{
+    cursor: pointer;
+}
+li{
+    margin: 5px;
+    display: flex;
+}
+.productSearch{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "product messageBox search";
+    width: auto;
+    
+}
+.messageBox{
+    grid-area: messageBox;
+    text-align: center;
+}
+.products{
+    grid-area: product;
+    justify-self: left;
+}
+.input{
+    grid-area: search;
+    justify-self: right;
+    align-self: center;
+    width: 80%;
+   height:20%;
+}
+footer{
+    position: fixed;
+    width: 100vw ;
+    grid-area: footer;
+    height: 2vh;
+    background-color:#226918b7;
+    bottom: 0;
+    left: 0;
+ }
