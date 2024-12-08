@@ -1,0 +1,119 @@
+/*
+ * Thanks to https://jsfiddle.net/ayoisaiah/c8b9zsaq/10/ for the calculator styles
+ */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+ 
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+#sideC, #sideY{
+  font-size: 1.5rem;
+}
+.calculator {
+  border: 10px solid #f79e39;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: rgb(226, 226, 225);
+}
+
+.calculator-screen {
+  width: 100%;
+  font-size: 5rem;
+  height: 80px;
+  border: none;
+ 
+  background-color: #252525;
+  color: #fff;
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+div .operator{
+  background-color: rgb(43, 42, 42);
+  color:white;
+
+}
+.foot, .inch, .fraction, .divide{
+  background-color: grey;
+  color:white;
+}
+.inch{
+  background-color: grey;
+  color:white;
+  grid-area: 1/2;
+}
+
+button {
+  height: 60px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #dd8a47;
+  background-color: transparent;
+  font-size: 2rem;
+  color: #333;
+  background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, .04));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .05), inset 0 1px 0 0 rgba(255, 255, 255, .45), inset 0 -1px 0 0 rgba(255, 255, 255, .15), 0 1px 0 0 rgba(255, 255, 255, .15);
+  text-shadow: 0 1px rgba(255, 255, 255, .4);
+  outline: none;
+}
+
+button:hover {
+  background-color: #5f5e5e;
+  cursor: pointer;
+}
+
+.operator {
+  color: #337cac;
+}
+
+.all-clear {
+  background-color: #f0595f;
+  border-color: #b0353a;
+  color: #fff;
+  grid-area: 6/3;
+}
+
+.all-clear:hover {
+  background-color: #f17377;
+}
+.number, .decimal{
+  background-color: #c4c4c4;
+}
+.equal-sign {
+  background-color: black;
+  border-color: black;
+  color: #fff;
+  height: 100%;
+  grid-area: 3/4/7/4
+}
+.foot{
+  grid-area: 1 / 1;
+}
+.fraction{
+  grid-area: 1 / 3;
+}
+.divide{
+  grid-area: 1 / 4;
+}
+.equal-sign:hover {
+  background-color: #3b3b3b;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
